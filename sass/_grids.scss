@@ -1,0 +1,164 @@
+// Requirements
+// ============
+
+@import "susy";
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Inika);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+$susy: (
+	columns: 10,
+	gutters: 1/10,
+	container: 100%,
+	math: fluid,
+	output: float,
+	gutter-position: after,
+	global-box-sizing: border-box,
+	debug: (
+		image: show,
+		color: rgba(#66f, .5),
+		output: background,
+		toggle: top right,
+		)
+	
+	);
+@include border-box-sizing;
+
+#main{
+	@include container;
+}
+.menu_bar{
+	
+	@include span(10);
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	background-image: url(../images/bg.jpg) ;
+	background-repeat:no-repeat;
+	background-size: cover;
+	height: 100vh;
+
+
+}
+.logo{
+	@include push(0.5 of 10);
+	@include span(2 of 10); 
+	margin-top: 2em;
+
+
+}
+.mobile_logo{
+	display: none;
+}
+.rotate{
+	background: url(../images/logotip.png) no-repeat 129% 150%;
+	-webkit-transition: all .5s ease;
+	border-radius: 200px
+}
+.rotate:hover{
+	background-position: -10% -20%;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+.menu{
+	@include span(7 of 10 last );
+	margin-top:0;
+	-ms-padding-start: 0;
+	-webkit-padding-start: 0;
+	-moz-padding-start: 0;
+	margin-bottom: 0;
+
+}
+.main_menu{
+	padding-top: 5em;
+	padding-bottom: 5em;
+	padding-left: 1em;
+	max-height: 15em;
+	margin-right: gutter(2);
+	@include span (1.5 of 7.5 );
+	display: inline-block;
+	text-align: left;
+	border-radius: 2px;
+}
+.main_menu:hover{
+	background: rgba(255,255,255,0.6);
+}
+.main_menu a{
+	color: $cream;;
+	font-family: 'Francois One', sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.main_menu p{
+	color: $cream;;
+	font-size: 12px;
+	font-family: 'Inika', sans-serif;
+	text-align: left;
+	margin-right: 0;
+}
+.toggle-nav {
+    display:none;
+}
+@media screen and (max-width: 964px){
+	.menu_bar{min-height: 390px;
+		max-height: 470px;}
+	
+	.top_bar{
+		@include span(10);
+		background: $cream;
+	}
+	.logo img{
+		display: none;
+	}
+	.logo{
+	@include push(0.5 of 10);
+	@include span(3 of 10); 
+	margin-top:20px;
+}
+	.mobile_logo{
+		display: inline;
+		color: black;
+		font-size: 2em;
+		font-family: 'Lobster';
+		letter-spacing: 1px;
+	}
+	.menu{
+		display: none;
+	}
+	.mobile_nav{
+		@include span( 1.1 of 10 last);
+		height: 80px;
+		background: #f7f7f7;
+	}
+	.toggle-nav {
+		width: span(0.5 of 1.1);
+      @include push(0.35 of 1.1);
+     	margin-top: 25px;
+        display:inline-block;
+        
+        border-radius:3px;
+
+        text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+        color:black;
+        font-size:25px;
+        transition:color linear 0.15s;
+        text-decoration: none;
+    }
+ 
+    .toggle-nav:hover, .toggle-nav.active {
+        text-decoration:none;
+        color:#66a992;
+    }
+}
+
+.slogan p{
+	font-family: 'Francois One', sans-serif;
+	text-transform: uppercase;
+	@include span(5);
+	@include push(2.7);
+	color: $cream;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 2em;
+
+}
