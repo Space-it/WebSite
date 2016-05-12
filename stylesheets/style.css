@@ -67,9 +67,10 @@
   background-position: -10% -20%;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
 }
 
-/* line 63, ../sass/_grids.scss */
+/* line 64, ../sass/_grids.scss */
 .menu {
   width: 69.72477%;
   float: right;
@@ -81,7 +82,7 @@
   margin-bottom: 0;
 }
 
-/* line 72, ../sass/_grids.scss */
+/* line 73, ../sass/_grids.scss */
 .main_menu {
   padding-top: 5em;
   padding-bottom: 5em;
@@ -96,12 +97,12 @@
   border-radius: 2px;
 }
 
-/* line 83, ../sass/_grids.scss */
+/* line 84, ../sass/_grids.scss */
 .main_menu:hover {
   background: rgba(255, 255, 255, 0.6);
 }
 
-/* line 86, ../sass/_grids.scss */
+/* line 87, ../sass/_grids.scss */
 .main_menu a {
   color: #fcfff5;
   font-family: 'Francois One', sans-serif;
@@ -109,7 +110,7 @@
   text-transform: uppercase;
 }
 
-/* line 92, ../sass/_grids.scss */
+/* line 93, ../sass/_grids.scss */
 .main_menu p {
   color: #fcfff5;
   font-size: 12px;
@@ -118,85 +119,12 @@
   margin-right: 0;
 }
 
-/* line 99, ../sass/_grids.scss */
+/* line 100, ../sass/_grids.scss */
 .toggle-nav {
   display: none;
 }
 
-@media screen and (max-width: 964px) {
-  /* line 103, ../sass/_grids.scss */
-  .menu_bar {
-    min-height: 390px;
-    max-height: 470px;
-  }
-
-  /* line 106, ../sass/_grids.scss */
-  .top_bar {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    background: #fcfff5;
-  }
-
-  /* line 110, ../sass/_grids.scss */
-  .logo img {
-    display: none;
-  }
-
-  /* line 113, ../sass/_grids.scss */
-  .logo {
-    margin-left: 5.04587%;
-    width: 29.3578%;
-    float: left;
-    margin-right: 0.91743%;
-    margin-top: 20px;
-  }
-
-  /* line 118, ../sass/_grids.scss */
-  .mobile_logo {
-    display: inline;
-    color: black;
-    font-size: 2em;
-    font-family: 'Lobster';
-    letter-spacing: 1px;
-  }
-
-  /* line 125, ../sass/_grids.scss */
-  .menu {
-    display: none;
-  }
-
-  /* line 128, ../sass/_grids.scss */
-  .mobile_nav {
-    width: 10.18349%;
-    float: right;
-    margin-right: 0;
-    height: 80px;
-    background: #f7f7f7;
-  }
-
-  /* line 133, ../sass/_grids.scss */
-  .toggle-nav {
-    width: 40.54054%;
-    margin-left: 34.68468%;
-    margin-top: 25px;
-    display: inline-block;
-    border-radius: 3px;
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
-    color: black;
-    font-size: 25px;
-    transition: color linear 0.15s;
-    text-decoration: none;
-  }
-
-  /* line 148, ../sass/_grids.scss */
-  .toggle-nav:hover, .toggle-nav.active {
-    text-decoration: none;
-    color: #66a992;
-  }
-}
-/* line 154, ../sass/_grids.scss */
+/* line 103, ../sass/_grids.scss */
 .slogan p {
   font-family: 'Francois One', sans-serif;
   text-transform: uppercase;
@@ -210,6 +138,103 @@
   margin-top: 2em;
 }
 
+@media screen and (max-width: 964px) {
+  /* line 115, ../sass/_grids.scss */
+  .menu_bar {
+    min-height: 390px;
+  }
+
+  /* line 118, ../sass/_grids.scss */
+  .top_bar {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #fcfff5;
+  }
+
+  /* line 122, ../sass/_grids.scss */
+  .logo img {
+    display: none;
+  }
+
+  /* line 125, ../sass/_grids.scss */
+  .logo {
+    margin-left: 5.04587%;
+    width: 49.54128%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: 20px;
+  }
+
+  /* line 130, ../sass/_grids.scss */
+  .mobile_logo {
+    display: inline;
+    color: black;
+    font-size: 2em;
+    font-family: 'Lobster';
+    letter-spacing: 1px;
+  }
+
+  /* line 137, ../sass/_grids.scss */
+  .menu {
+    display: none;
+  }
+
+  /* line 140, ../sass/_grids.scss */
+  .mobile_nav {
+    width: 10.18349%;
+    float: right;
+    margin-right: 0;
+    height: 80px;
+    background: #f7f7f7;
+  }
+
+  /* line 145, ../sass/_grids.scss */
+  .toggle-nav {
+    width: 40.54054%;
+    margin-left: 34.68468%;
+    margin-top: 25px;
+    display: inline-block;
+    border-radius: 3px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    color: black;
+    font-size: 25px;
+    transition: color linear 0.15s;
+    text-decoration: none;
+  }
+
+  /* line 160, ../sass/_grids.scss */
+  .toggle-nav:hover, .toggle-nav.active {
+    text-decoration: none;
+    color: #66a992;
+  }
+
+  /* line 164, ../sass/_grids.scss */
+  .slogan p {
+    margin-left: 20.18349%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 173, ../sass/_grids.scss */
+  .mobile_nav {
+    width: 15.22936%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 176, ../sass/_grids.scss */
+  .slogan {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 /* line 45, ../sass/_normalizer.scss */
 article,
 aside,

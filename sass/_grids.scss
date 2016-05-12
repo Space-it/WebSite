@@ -59,6 +59,7 @@ $susy: (
 	background-position: -10% -20%;
 	transform: rotate(90deg);
 	-webkit-transform: rotate(90deg);
+	-moz-transform:rotate(90deg);
 }
 .menu{
 	@include span(7 of 10 last );
@@ -99,9 +100,20 @@ $susy: (
 .toggle-nav {
     display:none;
 }
+.slogan p{
+	font-family: 'Francois One', sans-serif;
+	text-transform: uppercase;
+	@include span(5);
+	@include push(2.7);
+	color: $cream;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 2em;
+
+}
 @media screen and (max-width: 964px){
 	.menu_bar{min-height: 390px;
-		max-height: 470px;}
+		}
 	
 	.top_bar{
 		@include span(10);
@@ -112,7 +124,7 @@ $susy: (
 	}
 	.logo{
 	@include push(0.5 of 10);
-	@include span(3 of 10); 
+	@include span(5 of 10); 
 	margin-top:20px;
 }
 	.mobile_logo{
@@ -149,16 +161,22 @@ $susy: (
         text-decoration:none;
         color:#66a992;
     }
+    .slogan p{
+    	@include push(2);
+    	@include span (6);
+    	
+    	text-align: center;
+    }
 }
 
-.slogan p{
-	font-family: 'Francois One', sans-serif;
-	text-transform: uppercase;
-	@include span(5);
-	@include push(2.7);
-	color: $cream;
-	font-size: 3em;
-	text-align: center;
-	margin-top: 2em;
+@media screen and (max-width: 600px){
+	.mobile_nav{
+		@include span( 1.6 of 10 last);
+	}
+	.slogan {
+    	
+    	@include span (10);
 
+    	    }
+   
 }
